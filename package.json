@@ -1,0 +1,15 @@
+{
+  "name": "mcpinger",
+  "version": "0.0.1",
+  "description": "MCPinger",
+  "main": "index.js",
+  "dependencies": {
+    "mcping-js": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kıraç Armağan Önal",
+  "license": "Apache-2.0"
+}
