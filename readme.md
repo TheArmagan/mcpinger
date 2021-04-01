@@ -19,6 +19,7 @@ let mcpinger = require("mcpinger");
 mcpinger.java({ host: "example.com" }).then((res) => {
   console.log(res);
   /**
+   * 
    * Example output:
    * 
    * {
@@ -36,5 +37,7 @@ mcpinger.java({ host: "example.com" }).then((res) => {
    *   ],
    *   ms: 243
    * }
+   * 
+   * */
 });
 ```
