@@ -38,7 +38,8 @@ mcpinger.java({ host: "example.com" }).then((res) => {
    *   favicon: Buffer,
    *   motd: 'Example.',
    *   ms: 10,
-   *   ipType: 'hostname'
+   *   ipType: 'hostname',
+   *   originalIp: String
    * }
    * 
    * */

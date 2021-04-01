@@ -14,10 +14,11 @@ const mainIpRegex = ipRegex({ exact: true, includeBoundaries: true });
  * @param {Number?} param0.port Default: `25565`
  * @param {Number?} param0.timeout Default: `5000`
  * @param {Number?} param0.protocolVersion Default: `-1` https://wiki.vg/Protocol_version_numbers
- * @returns {Promise<{ms:Number,protocolVersion:Number,version:String,onlinePlayerCount:Number,maxPlayerCount:Number,playerList:{uuid:String,name:String}[],favicon:Buffer,motd:String|Object,ip:String,hostname?:String,ipType:"ip"|"hostname"}>}
+ * @returns {Promise<{ms:Number,protocolVersion:Number,version:String,onlinePlayerCount:Number,maxPlayerCount:Number,playerList:{uuid:String,name:String}[],favicon:Buffer,motd:String|Object,ip:String,hostname?:String,ipType:"ip"|"hostname",originalIp:String}>}
  */
 function ping({ host, port = 25565, timeout = 5000, protocolVersion = -1 }) {
   let start = performance.now();
+  let originalIp = host;
   return new Promise((resolve, reject) => {
     pinger.ping.call({ host, port }, timeout, protocolVersion, async (err, res) => {
       if (err) return reject(err);
@@ -52,7 +53,8 @@ function ping({ host, port = 25565, timeout = 5000, protocolVersion = -1 }) {
         favicon: Buffer.from(res.favicon?.replace("data:image/png;base64,","") || "","base64"),
         motd: res.description,
         ms,
-        ipType
+        ipType,
+        originalIp
       });
     });
   })
