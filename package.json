@@ -14,5 +14,29 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kıraç Armağan Önal",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheArmagan/mcpinger.git"
+  },
+  "keywords": [
+    "mc",
+    "ping",
+    "motd",
+    "server",
+    "player",
+    "count",
+    "version",
+    "protocol",
+    "hostname",
+    "ip",
+    "minecraft",
+    "java",
+    "async",
+    "cool"
+  ],
+  "bugs": {
+    "url": "https://github.com/TheArmagan/mcpinger/issues"
+  },
+  "homepage": "https://github.com/TheArmagan/mcpinger#readme"
 }
