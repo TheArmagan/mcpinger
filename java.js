@@ -14,7 +14,7 @@ const mainIpRegex = ipRegex({ exact: true, includeBoundaries: true });
  * @param {Number?} param0.port Default: `25565`
  * @param {Number?} param0.timeout Default: `5000`
  * @param {Number?} param0.protocolVersion Default: `-1` https://wiki.vg/Protocol_version_numbers
- * @returns {Promise<{ms:Number,protocolVersion:Number,version:String,onlinePlayerCount:Number,maxPlayerCount:Number,playerList:{uuid:String,name:String}[],favicon:String,description:String|Object,ip:String,hostName?:String}>}
+ * @returns {Promise<{ms:Number,protocolVersion:Number,version:String,onlinePlayerCount:Number,maxPlayerCount:Number,playerList:{uuid:String,name:String}[],favicon:String,motd:String|Object,ip:String,hostName?:String}>}
  */
 function ping({ host, port = 25565, timeout = 5000, protocolVersion = -1 }) {
   let start = performance.now();
