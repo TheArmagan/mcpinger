@@ -1,5 +1,5 @@
 let mcpinger = require(".");
 
-mcpinger.java({ host: "pearcraft.ddns.net" }).then((res) => {
+mcpinger.java({ host: "mc.hypixel.net" }).then((res) => {
   console.log(res);
 })
