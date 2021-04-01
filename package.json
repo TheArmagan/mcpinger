@@ -1,6 +1,6 @@
 {
   "name": "mcpinger",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "MCPinger: A yet another minecraft server pinger.",
   "main": "index.js",
   "dependencies": {
