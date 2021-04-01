@@ -43,6 +43,8 @@ function ping({ host, port = 25565, timeout = 5000, protocolVersion = -1 }) {
           uuid: i.id,
           name: i.name
         })),
+        favicon: res.favicon,
+        motd: res.description,
         ms
       });
     });

@@ -35,7 +35,9 @@ mcpinger.java({ host: "example.com" }).then((res) => {
    *       name: 'example-name'
    *     }
    *   ],
-   *   ms: 243
+   *   favicon: 'Base64 string.',
+   *   motd: 'Example.',
+   *   ms: 10
    * }
    * 
    * */
