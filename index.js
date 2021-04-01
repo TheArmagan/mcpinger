@@ -1,3 +1,3 @@
-const javaPing = require("./java");
+const java = require("./java");
 
-module.exports = { javaPing };
+module.exports = {java};
