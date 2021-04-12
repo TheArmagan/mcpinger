@@ -1,5 +1,5 @@
 let mcpinger = require(".");
 
-mcpinger.java({ host: "mc.hypixel.net" }).then((res) => {
+mcpinger.java({ host: "flightsmp.mcserver.us" }).then((res) => {
   console.log(res);
 })

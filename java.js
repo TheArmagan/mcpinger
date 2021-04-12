@@ -13,17 +13,18 @@ function ping({ host, port = 25565, timeout = 5000, protocolVersion = -1 }) {
   return new Promise((resolve, reject) => {
     pinger.ping.call({ host, port }, timeout, protocolVersion, async (err, res) => {
       if (err) return reject(err);
+      if (!res) return reject("not found");
       resolve({
         protocolVersion: res?.version?.protocol,
         version: res?.version?.name,
         onlinePlayerCount: res?.players?.online,
         maxPlayerCount: res?.players?.max,
-        playerList: (res.players.sample ?? []).map(i => ({
-          uuid: i.id,
-          name: i.name
+        playerList: (res?.players?.sample ?? []).map(i => ({
+          uuid: i?.id,
+          name: i?.name
         })),
-        favicon: Buffer.from(res.favicon?.replace("data:image/png;base64,","") || "","base64"),
-        motd: res.description
+        favicon: Buffer.from(res?.favicon?.replace("data:image/png;base64,","") || "","base64"),
+        motd: res?.description
       });
     });
   })
