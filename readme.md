@@ -8,7 +8,6 @@
 let mcpinger = require("mcpinger");
 
 /**
- * 
  * Options:
  * - host: The ip of the server.
  * - port?: Port of the server. (Default 25565)
@@ -19,12 +18,9 @@ let mcpinger = require("mcpinger");
 mcpinger.java({ host: "example.com" }).then((res) => {
   console.log(res);
   /**
-   * 
    * Example output:
    * 
    * {
-   *   ip: '127.0.0.1',
-   *   hostname: 'example.com', // Host name exist if you are using a hostname instead of a normal ip like 127.0.0.1.
    *   protocolVersion: 754,
    *   version: 'Paper 1.16.5',
    *   onlinePlayerCount: 1,
@@ -37,9 +33,6 @@ mcpinger.java({ host: "example.com" }).then((res) => {
    *   ],
    *   favicon: Buffer,
    *   motd: 'Example.',
-   *   ms: 10,
-   *   ipType: 'hostname',
-   *   originalIp: String
    * }
    * 
    * */
